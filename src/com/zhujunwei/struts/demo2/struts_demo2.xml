@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+
+	<!-- Struts2为了管理Action的配置，通过包进行管理 -->
+	<!-- 配置Struts2的包 -->
+    <package name="demo2" namespace="/" extends="struts-default">
+    
+		<!-- 全局结果页面 -->
+		<global-results>
+			<result name="success">/demo2/demo2.jsp</result>
+			<result name="input">/demo2/demo3.jsp</result>
+		</global-results>
+
+    	<!-- 配置action -->
+    	<action name="requestDemo1" class="com.zhujunwei.struts.demo2.RequestDemo1">
+    		<!-- 设置为重定向，默认为转发(dispatcher)方式 -->
+			<result name="success" type="redirect">/demo2/demo2.jsp</result>
+    	</action>
+    	
+    	<action name="requestDemo2" class="com.zhujunwei.struts.demo2.RequestDemo2"></action>
+    	
+    	<action name="requestDemo3" class="com.zhujunwei.struts.demo2.RequestDemo3"></action>
+    	
+    	<!-- 数据封装的Action -->
+    	<action name="userAction1" class="com.zhujunwei.struts.demo2.UserAction1"></action>
+    	<action name="userAction2" class="com.zhujunwei.struts.demo2.UserAction2"></action>
+    	<action name="userAction3" class="com.zhujunwei.struts.demo2.UserAction3"></action>
+    	<!-- 复杂数据封装（多个对象） -->
+    	<action name="productAction1" class="com.zhujunwei.struts.demo2.ProductAction1"></action>
+    	<action name="productAction2" class="com.zhujunwei.struts.demo2.ProductAction2"></action>
+    	
+    	
+    </package>
+
+</struts>

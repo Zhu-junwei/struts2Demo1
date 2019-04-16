@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 手动开启动态方法访问 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	
+	<!-- Struts2为了管理Action的配置，通过包进行管理 -->
+	<!-- 配置Struts2的包 -->
+    <package name="demo1" namespace="/" extends="struts-default">
+
+    	<!-- 配置action -->
+    	<action name="hello" class="com.zhujunwei.struts.demo1.HelloAction">
+    		<result name="success">/demo1/success.jsp</result>
+    	</action>
+    	
+    	<!-- action的三种写法 -->
+    	<action name="Action1" class="com.zhujunwei.struts.demo1.Action1"></action>
+    	<action name="Action2" class="com.zhujunwei.struts.demo1.Action2"></action>
+    	<action name="Action3" class="com.zhujunwei.struts.demo1.Action3"></action>
+    	
+    	<!-- action的三种访问方式 -->
+    	<!-- method方式 -->
+    	<action name="userFind" class="com.zhujunwei.struts.demo1.UserAction" method="find"></action>
+    	<action name="userUpdate" class="com.zhujunwei.struts.demo1.UserAction" method="update"></action>
+    	<action name="userDelete" class="com.zhujunwei.struts.demo1.UserAction" method="delete"></action>
+    	<action name="userSave" class="com.zhujunwei.struts.demo1.UserAction" method="save"></action>
+    	<!-- 通配符方式 -->
+		<action name="product_*" class="com.zhujunwei.struts.demo1.ProductAction" method="{1}"></action>
+		<!-- 动态方法访问、需要手动开启动态方法访问 -->
+		<action name="product" class="com.zhujunwei.struts.demo1.ProductAction"></action>
+		
+    	
+    </package>
+
+</struts>

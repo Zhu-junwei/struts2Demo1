@@ -1,0 +1,14 @@
+RequestDemo1
+RequestDemo2
+RequestDemo3 在Action中访问Servlet的三种方式
+
+User User类
+
+UserAction1
+UserAction2
+UserAction3 数据封装的三种方式
+
+Product Produce类
+ProduceAction1 将多个数据封装到List集合中
+ProduceAction2 将多个数据封装到Map集合中
+

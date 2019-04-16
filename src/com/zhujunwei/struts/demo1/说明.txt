@@ -1,0 +1,11 @@
+HelloAction struts2入门
+
+Action1
+Action2
+Action3 Action的三种编写方式
+
+#Action的三种访问方式
+UserAction Action的method访问
+ProductAction Action的通配符和动态方法访问
+
+struts_demo1.xml 加载到src目录下的struts.xml使用

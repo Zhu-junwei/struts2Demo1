@@ -1,0 +1,5 @@
+OgnlDemo1.java Ognl调用对象方法、对象静态方法、获取（root、context）数据
+ValueStackDemo2.java 获取ValueStack对象的方法
+ValueStackDemo3.java 查看值栈
+ValueStackDemo4.java 操作ValueStack:方式一：利用Action本身在值栈中的特性
+ValueStackDemo5.java 操作ValueStack:方式二：调用值栈中的方法实现

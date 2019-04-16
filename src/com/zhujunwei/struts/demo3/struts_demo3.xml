@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+
+	<!-- Struts2为了管理Action的配置，通过包进行管理 -->
+	<!-- 配置Struts2的包 -->
+    <package name="demo3" namespace="/" extends="struts-default">
+    
+    	<!-- 配置action -->
+    	<action name="valueStackDemo2" class="com.zhujunwei.struts.demo3.ValueStackDemo2"></action>
+    	<action name="valueStackDemo3" class="com.zhujunwei.struts.demo3.ValueStackDemo3">
+    		<result name="success">/demo3/demo2.jsp</result>
+    	</action>
+    	<action name="valueStackDemo4" class="com.zhujunwei.struts.demo3.ValueStackDemo4">
+    		<result name="success">/demo3/demo2.jsp</result>
+    	</action>
+    	<action name="valueStackDemo5" class="com.zhujunwei.struts.demo3.ValueStackDemo5">
+    		<result name="success">/demo3/demo2.jsp</result>
+    	</action>
+    	
+    </package>
+
+</struts>
